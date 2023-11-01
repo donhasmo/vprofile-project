@@ -3,7 +3,7 @@ RUN apt update && apt install maven -y
 RUN git clone https://github.com/donhasmo/vprofile-project.git
 RUN cd vprofile-project && git checkout docker && mvn install
 
-FROM tomcat:9-jrell
+FROM tomcat:9-jre11
 LABEL "Project"="Vprofile"
 LABEL "Author"="Hassan"
 RUN rm -rf /usr/local/tomcat/webapps/*
